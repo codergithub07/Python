@@ -1,0 +1,1 @@
+print('You can also use single inverted coma instead of double inverted coma in print statement')

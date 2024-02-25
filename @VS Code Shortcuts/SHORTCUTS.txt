@@ -1,0 +1,2 @@
+ctrl + i => Show recommendations by intellicence
+ctrl + j => Hide/Show Terminal
