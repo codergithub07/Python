@@ -93,7 +93,7 @@ name5 = 'steve'
         # 'kim' : 45,
         # 'rom' : 23,
     # }
-    # for n, age in user.items(): # Items method is used to get pair of key-value from the dictonary
+    # for n, age in user.items(): # Items method is used to get key-value pair from the dictonary
         # print("Name of User: ", n)
         # print("Age of User: ", age)
         # print("") # Just used to add empty line
@@ -123,7 +123,7 @@ name5 = 'steve'
         # for n in age.keys():
             # print(n)
             # if n in friends:
-                # print("Hey " + n + " I see you turned into " + str(age[n]) + " CONGRADULATIONS for that we met at your " + str(age[n] - 5) + "th Birthday")
+                # print("Hey " + n + " I see you turned into " + str(age[n]) + " CONGRADULATIONS for that, we met at your " + str(age[n] - 5) + "th Birthday")
             # print("")
 
 
