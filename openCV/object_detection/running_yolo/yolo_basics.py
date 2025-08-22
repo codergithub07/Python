@@ -1,4 +1,8 @@
 from ultralytics import YOLO
+import torch
+
+# Force CPU usage to avoid CUDA compatibility issues
+torch.cuda.is_available = lambda: False
 
 model = YOLO("yolov8n.pt").to("cpu")
 
