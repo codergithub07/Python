@@ -1,9 +1,18 @@
 from ultralytics import YOLO
 import torch
+import os
 
 # Force CPU usage to avoid CUDA compatibility issues
 torch.cuda.is_available = lambda: False
 
-model = YOLO("yolov8n.pt").to("cpu")
+# Get the script's directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-results = model("object_detection/running_yolo/images/school_bus.jpg", show=True, save=True)
+model = YOLO(os.path.join(script_dir, "../../yolov8n.pt")).to("cpu")
+
+# Save results in the script's directory
+results = model(os.path.join(script_dir, "images/school_bus.jpg"), 
+                show=True, 
+                save=True, 
+                project=os.path.join(script_dir, "runs"))
+
