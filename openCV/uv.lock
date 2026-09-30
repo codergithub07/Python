@@ -360,6 +360,18 @@ wheels = [
 ]
 
 [[package]]
+name = "cvzone"
+version = "1.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "numpy", version = "2.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "opencv-python" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e5/78/63f61c3be1a23c52b6aabf38bac873df317bd8de820692f131213ee50b30/cvzone-1.6.1.tar.gz", hash = "sha256:a6bea5834647b6fc52a44d8b4b670f8c88b2d4f0fc56549b4024ce224f0d3979", size = 25483, upload-time = "2023-09-09T10:19:23.972Z" }
+
+[[package]]
 name = "cycler"
 version = "0.12.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1353,6 +1365,7 @@ name = "opencv"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "cvzone" },
     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "numpy", version = "2.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
@@ -1361,6 +1374,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "cvzone", specifier = ">=1.6.1" },
     { name = "numpy", specifier = ">=2.0.2" },
     { name = "ultralytics", specifier = ">=8.3.184" },
 ]
